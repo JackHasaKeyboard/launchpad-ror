@@ -2,7 +2,9 @@
 
 #links
   - @links.each do |link|
-    %a{:href => link.url}
+    %a{:href => link.url, :class => "link"}
       %h3= link.title
       .info
+        = link_to "Like", like_link_path(link), method: :put
+        %h5= link.votes_for.size
         %h5= link.url

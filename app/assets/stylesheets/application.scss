@@ -20,16 +20,16 @@ a {
 
 #links {
 	display: flex;
-	> a {
+	.link {
 		padding: 10px;
 		margin: 10px;
-		.info {
-			display: none;
-		}
 		&:hover {
 			.info {
 				display: initial;
 			}
+		}
+		.info {
+			display: none;
 		}
 	}
 }
