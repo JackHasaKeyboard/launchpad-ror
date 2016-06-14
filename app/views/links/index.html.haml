@@ -1,8 +1,6 @@
-%p#notice= notice
-
 #links
   - @links.each do |link|
-    %a{href: link.url, :class => "link"}
+    %a{href: link.url, :class => "link", target: "_blank"}
       %h3= link.title
       .info
         -# = link_to "Like", like_link_path(link), method: :put

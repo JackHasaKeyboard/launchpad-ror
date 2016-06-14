@@ -14,11 +14,17 @@
  *= require_self
  */
 
+html, body {
+height: 100%
+}
+
 body {
 	display: flex;
+	margin: 0;
 }
 
 a {
+	color: #000;
 	text-decoration: none;
 }
 
@@ -29,21 +35,10 @@ a {
 #side {
 	flex-direction: column;
 	width: 160px;
-}
-
-#links {
-	flex-grow: 1;
-	.link {
-		padding: 10px;
-		margin: 10px;
-		.info {
-			background: #333;
-			display: none;
-		}
-		&:hover {
-			.info {
-				display: initial;
-			}
-		}
+	height: 100%;
+	#acct {
+		margin-top: auto;
+		display: flex;
+		flex-direction: column;
 	}
 }
