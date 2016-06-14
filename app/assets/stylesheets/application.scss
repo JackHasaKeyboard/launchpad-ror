@@ -14,16 +14,30 @@
  *= require_self
  */
 
+body {
+	display: flex;
+}
+
 a {
 	text-decoration: none;
 }
 
-#links {
+#side, #links {
 	display: flex;
+}
+
+#side {
+	flex-direction: column;
+	width: 160px;
+}
+
+#links {
+	flex-grow: 1;
 	.link {
 		padding: 10px;
 		margin: 10px;
 		.info {
+			background: #333;
 			display: none;
 		}
 		&:hover {
