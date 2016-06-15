@@ -4,11 +4,17 @@
 
 #links {
 	flex-grow: 1;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	position: relative;
 	.link {
+		flex-grow: 1;
 		padding: 10px;
 		margin: 10px;
+		width: 160px;
 		.info {
 			background: #333;
+			position: absolute;
 			display: none;
 		}
 		&:hover {
