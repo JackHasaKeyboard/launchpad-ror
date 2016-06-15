@@ -21,6 +21,7 @@ html, body {
 body {
 	display: flex;
 	margin: 0;
+	background: #333;
 }
 
 a {
@@ -28,17 +29,20 @@ a {
 	text-decoration: none;
 }
 
-#side, #links {
-	display: flex;
-}
-
 #side {
+	background: #fff;
+	display: flex;
 	flex-direction: column;
-	width: 160px;
 	height: 100%;
-	#acct {
-		margin-top: auto;
+	div {
+		padding: 10px;
 		display: flex;
 		flex-direction: column;
+		* {
+			padding: 10px;
+		}
+	}
+	#acct {
+		margin-top: auto; 
 	}
 }
