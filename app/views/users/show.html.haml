@@ -1,0 +1,11 @@
+#links
+  - @links.each do |link|
+    .link
+      %a{href: link.url, target: "_blank"}
+        %h3= link.title
+        
+      .info
+        %h5= link.votes_for.size
+        %h5= link.url
+
+= link_to "Edit", "/users/edit"
