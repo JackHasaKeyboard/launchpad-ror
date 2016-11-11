@@ -1,7 +1,7 @@
 #links
   - @links.each do |link|
     .link
-      %a{href: link.url, target: "_blank"}
+      %a{href: link.url, target: "_blank", style: "background: #{link.color}"}
         %h3= link.title
         
       .info
