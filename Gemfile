@@ -2,14 +2,15 @@ source 'https://rubygems.org'
 
 gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'acts_as_votable', '~> 0.10.0'
+
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'sass', '~> 3.4', '>= 3.4.22'
-gem 'html2haml', '~> 2.0'
+
+gem 'pg', '~> 0.18'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
