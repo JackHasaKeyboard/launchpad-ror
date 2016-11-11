@@ -3,35 +3,36 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #links {
-	padding: 10px;
 	display: flex;
 	flex-grow: 1;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	overflow-y: scroll;
-	position: relative;
-						* {
-							margin: 10px;
-						}
-						.link {
-							background: grey;
-							flex-grow: 1;
-							width: 160px;
-							position: relative;
-							.info {
-								display: flex;
-								flex-direction: row;
-								display: none;
-								position: absolute;
-								width: 100%;
-								margin: 0;
-								background: #fff;
-								z-index: 1;
-							}
-							&:hover {
-								.info {
-									display: initial;
-								}
-							}
-						}
-					}
+	.link {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		position: relative;
+		margin: 10px;
+	 	min-width: 160px;
+		background: grey;
+		* {
+			margin: 0;
+			padding: 6px;
+		}
+		.info {
+			display: none;
+			padding: 0;
+			z-index: 1;
+			h5 {
+				flex-grow: 1;
+				background: #fff;
+				color: #333;
+			}
+		}
+		&:hover {
+			.info {
+				display: flex;
+			}
+		}
+	}
+}
