@@ -27,4 +27,12 @@ $(document).ready(function(){
 	$('#tog').click(function(){
 		$('#side').toggle();
 	});
+
+	$('input[name="link[color]"]').keydown(function(){
+		var color = $(this).val();
+
+		$('#color_box').css({
+			'background': color
+		});
+	});
 });

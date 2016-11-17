@@ -7,21 +7,24 @@
       %ul
         - @link.errors.full_messages.each do |message|
           %li= message
+
   .field
     = f.label :title
-    %br/
     = f.text_field :title
+
   .field
     = f.label :url, 'URL'
-    %br/
     = f.text_field :url
-  .field
+
+  .field#color
     = f.label :color, 'Color'
-    %br/
     = f.text_field :color
+
+    #color_box
+
   .field
     = f.label :desc, 'Description'
-    %br/
     = f.text_field :desc
+
   .actions
     = f.submit
