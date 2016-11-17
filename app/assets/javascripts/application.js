@@ -16,6 +16,14 @@
 //= require_tree .
 
 $(document).ready(function(){
+	$('.link').mouseenter(function(){
+		$(this).find('.info').show();
+	});
+
+	$('.link').mouseleave(function(){
+		$(this).find('.info').hide();
+	});
+
 	$('#tog').click(function(){
 		$('#side').toggle();
 	});
