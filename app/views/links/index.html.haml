@@ -8,3 +8,5 @@
         -# = link_to "Like", like_link_path(link), method: :put
         %h5= link.votes_for.size
         %h5= link.url
+        - unless link.desc.nil?
+          %p= link.desc
