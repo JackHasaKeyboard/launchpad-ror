@@ -7,6 +7,8 @@ gem 'friendly_id', '~> 5.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'sass', '~> 3.4', '>= 3.4.22'
 
+gem 'jquery-turbolinks', '~> 2.1'
+
 gem 'pg', '~> 0.18'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
