@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'friendly_id', '~> 5.1'
 
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'sass', '~> 3.4', '>= 3.4.22'
