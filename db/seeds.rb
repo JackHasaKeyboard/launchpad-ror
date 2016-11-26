@@ -4,9 +4,6 @@ ActsAsVotable::Vote.create!([
   {votable_id: 6, votable_type: "Link", voter_id: 2, voter_type: "User", vote_flag: true, vote_scope: nil, vote_weight: 1},
   {votable_id: 152, votable_type: "Link", voter_id: 2, voter_type: "User", vote_flag: true, vote_scope: nil, vote_weight: 1}
 ])
-User.create!([
-  {email: "jackhasakeyboard@gmail.com", encrypted_password: "$2a$11$67hmYFsks39H.WjRXKEa6.tnX44MQEpZSHxrlmzjxVNoEdLw4AG0y", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-11-18 18:10:51", last_sign_in_at: "2016-11-18 18:10:51", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1"}
-])
 Link.create!([
   {title: "Assembly", url: "assembly.com", user_id: nil, color: "#10a2b8", desc: "Build software in conjunction of others, share the wealth.", slug: "assembly"},
   {title: "Ards", url: "www.awwwards.com", user_id: nil, color: "#3c948b", desc: "Potentially the closest thing that the internet has to The Oscars for web-design.\\n<br>\\n<br>\\nShowcase of award-winning websites that have been scored for your browsing convenience.", slug: "ards"},
