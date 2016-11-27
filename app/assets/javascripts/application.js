@@ -29,6 +29,7 @@ $(document).ready(function(){
 		$('#side').toggle();
 	});
 
+	// form
 	$('input[name="link[color]"]').keydown(function(){
 		var color = $(this).val();
 

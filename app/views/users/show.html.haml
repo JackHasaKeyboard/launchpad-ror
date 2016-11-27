@@ -1,11 +1,44 @@
+%h3= @user.email
+
+%h3 Likes
+
 #links
-  - @links.each do |link|
+  - @likes.each do |like|
+    - if like.present?
+      .link
+        %a{href: "//#{like.url}", target: "_blank", style: "background: #{like.color}"}
+          %h3= like.title
+            
+        .info
+          %h5
+            = fa_icon "thumbs-up"
+            = like.votes_for.size
+
+          %h5
+            = fa_icon "link"
+            = like.url
+
+          .ctrl
+            - if like.user_id = current_user.id
+              = link_to "Edit", "links/#{like.slug}/edit"
+
+%h3 Submitted
+
+#links
+  - @submits.each do |submit|
     .link
-      %a{href: link.url, target: "_blank"}
-        %h3= link.title
+      %a{href: "//#{submit.url}", target: "_blank", style: "background: #{submit.color}"}
+        %h3= submit.title
         
       .info
-        %h5= link.votes_for.size
-        %h5= link.url
+        %h5= submit.votes_for.size
+        %h5= submit.url
+
+        .like
+          = link_to "Like (#{submit.votes_for.size})", like_link_path(submit), method: :put
+          = fa_icon "thumbs-up"
+
+        .ctrl
+          = link_to "Edit", "#{submit.slug}/edit"
 
 = link_to "Edit settings", "/users/edit"

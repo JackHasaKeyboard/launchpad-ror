@@ -7,24 +7,25 @@
       %ul
         - @link.errors.full_messages.each do |message|
           %li= message
+  
+  #link_form
+    .field
+      = f.label :title
+      = f.text_field :title
 
-  .field
-    = f.label :title
-    = f.text_field :title
+    .field
+      = f.label :url, 'URL'
+      = f.text_field :url
 
-  .field
-    = f.label :url, 'URL'
-    = f.text_field :url
+    .field#color
+      = f.label :color, 'CSS Color', :placeholder => 'hex'
+      = f.text_field :color
 
-  .field#color
-    = f.label :color, 'Color'
-    = f.text_field :color
+      #color_box
 
-    #color_box
+    .field
+      = f.label :desc, 'Description', :placeholder => 'General justification of the website and how it works'
+      = f.text_field :desc
 
-  .field
-    = f.label :desc, 'Description'
-    = f.text_field :desc
-
-  .actions
-    = f.submit
+    .actions
+      = f.submit

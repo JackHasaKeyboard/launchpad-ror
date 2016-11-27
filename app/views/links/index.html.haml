@@ -1,18 +1,21 @@
 #links
   - @links.each do |link|
     .link
-      %a{href: link.url, target: "_blank", style: "background: #{link.color}"}
+      %a{href: "//#{link.url}", target: "_blank", style: "background: #{link.color}"}
         %h3= link.title
         
       .info
-        -# = link_to "Like", like_link_path(link), method: :put
-        %h5= link.votes_for.size
-        %h5= link.url
-        %h5= link.user_id
-        - unless link.desc.nil?
+        - if link.desc.present?
           %p= link.desc
 
-        %div
-          - if user_signed_in?
-            - if link.user_id = current_user.id
-              = link_to "Edit", "links/#{link.slug}/edit"
+        %h5
+          = fa_icon "link"
+          = link.url
+
+        %h5
+          = fa_icon "thumbs-up"
+          = link.votes_for.size
+
+        .ctrl
+          - if link.user_id = current_user.id
+            = link_to "Edit", "links/#{link.slug}/edit"
