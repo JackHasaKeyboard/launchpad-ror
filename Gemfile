@@ -9,6 +9,8 @@ gem 'sass', '~> 3.4', '>= 3.4.22'
 
 gem 'jquery-turbolinks', '~> 2.1'
 
+gem 'font-awesome-rails'
+
 gem 'pg', '~> 0.18'
 
 gem 'seed_dump', '~> 3.2', '>= 3.2.4'
