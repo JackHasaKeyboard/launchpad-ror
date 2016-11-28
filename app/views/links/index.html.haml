@@ -2,7 +2,7 @@
   - @links.each do |link|
     .link
       %a{href: "//#{link.url}", target: "_blank", style: "background: #{link.color}"}
-        %h3= link.title
+        %h3= link.name
         
       .info
         - if link.desc.present?
