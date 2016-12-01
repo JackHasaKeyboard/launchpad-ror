@@ -14,7 +14,17 @@
  *= require_self
  */
 
+
 @import "font-awesome";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
 
 a {
 	color: #000;
@@ -37,12 +47,12 @@ body {
 #disp {
 	overflow-y: scroll;
 	flex-grow: 1;
-	padding: 20px;
+	padding: 12px;
 	background: #333;
 	* {
 			color: #fff;
 	}
-	input {
+	input, textarea {
 		color: #000;
 	}
 }
@@ -78,8 +88,13 @@ body {
 #link_form {
 	.field {
 		display: flex;
-		input {
+		input, textarea {
 			margin-left: auto;
+		}
+		textarea {
+			width: 260px;
+			font-family: inherit;
+			overflow: visible;
 		}
 	}
 	#color {

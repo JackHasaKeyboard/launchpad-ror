@@ -8,14 +8,16 @@
         - if link.desc.present?
           %p= link.desc
 
-        %h5
-          = fa_icon "link"
-          = link.url
+        .stats
+          %h5
+            = fa_icon "link"
+            = link.url
 
-        %h5
-          = fa_icon "thumbs-up"
-          = link.votes_for.size
+          %h5
+            %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
+              = fa_icon "thumbs-up"
+              = link.votes_for.size
 
         .ctrl
           - if link.user_id = current_user.id
-            = link_to "Edit", "links/#{link.slug}/edit"
+            = link_to "Edit", edit_link_path(link)

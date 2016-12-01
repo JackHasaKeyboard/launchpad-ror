@@ -32,12 +32,22 @@
 			margin-top: 42px;
 			width: 100%;
 			display: none;
-			padding: 0;
 			z-index: 1;
 			background: #444;
 			p {
+				padding: 10px;
 				background: #fff;
 				color: #000;
+			}
+			a {
+				padding: 0;
+			}
+			.stats {
+				display: block;
+				padding: 4px;
+				h5 {
+					padding: 4px;
+				}
 			}
 		}
 		.ctrl {
