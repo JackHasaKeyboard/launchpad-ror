@@ -24,6 +24,8 @@ h4,
 h5,
 h6 {
 	font-weight: normal;
+	padding: 10px;
+	margin: 0;
 }
 
 a {
@@ -44,66 +46,73 @@ body {
 	margin: 0;
 }
 
+h3 {
+	display: flex;
+	a:last-child {
+		margin-left: auto;
+	}
+}
+
 #disp {
 	overflow-y: scroll;
 	flex-grow: 1;
 	padding: 12px;
 	background: #333;
-	* {
-			color: #fff;
-	}
-	input, textarea {
-		color: #000;
-	}
-}
+							* {
+								color: #fff;
+							}
+							input, textarea {
+								color: #000;
+							}
+						}
 
-#side {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	background: #fff;
-	div {
-		padding: 10px;
-		display: flex;
-		flex-direction: column;
-		* {
-			padding: 10px;
-		}
-	}
-	#acct {
-		margin-top: auto; 
-	}
-}
+						#side {
+							display: flex;
+							flex-direction: column;
+							height: 100%;
+							background: #fff;
+							div {
+								padding: 10px;
+								display: flex;
+								flex-direction: column;
+								* {
+									padding: 10px;
+								}
+							}
+							#acct {
+								margin-top: auto; 
+							}
+						}
 
-#tog {
-	display: flex;
-	cursor: pointer;
-	align-items: center;
-	padding: 10px;
-	img {
-		width: 6px;
-	}
-}
+						#tog {
+							display: flex;
+							cursor: pointer;
+							align-items: center;
+							padding: 10px;
+							img {
+								width: 6px;
+							}
+						}
 
-#link_form {
-	.field {
-		display: flex;
-		input, textarea {
-			margin-left: auto;
-		}
-		textarea {
-			width: 260px;
-			font-family: inherit;
-			overflow: visible;
-		}
-	}
-	#color {
-		#color_box {
-			margin-left: auto;
-			position: absolute;
-			display: inline-block;
-			padding: 10px;
-			margin-bottom: -6px;
-		}
-	}
-}
+						#link_form {
+							.field {
+								display: flex;
+								input, textarea {
+									margin-left: auto;
+								}
+								textarea {
+									width: 260px;
+									font-family: inherit;
+									overflow: visible;
+								}
+							}
+							#color {
+								#color_box {
+									margin-left: auto;
+									position: absolute;
+									display: inline-block;
+									padding: 10px;
+									margin-bottom: -6px;
+								}
+							}
+						}
