@@ -22,6 +22,16 @@
               = fa_icon "thumbs-up"
               = like.votes_for.size
 
+          - if like.discip.present?
+            %h5
+              = fa_icon "pencil"
+              = like.discip
+
+          - if like.kind.present?
+            %h5
+              = fa_icon "cogs"
+              = like.kind
+
           .ctrl
             - if like.user_id = current_user.id
               = link_to "Edit", "links/#{like.slug}/edit"
@@ -48,7 +58,15 @@
             = fa_icon "link"
             = submit.url
 
+          - if submit.discip.present?
+            %h5
+              = fa_icon "pencil"
+              = submit.discip
+
+          - if submit.kind.present?
+            %h5
+              = fa_icon "cogs"
+              = submit.kind
+
         .ctrl
           = link_to "Edit", "#{submit.slug}/edit"
-
-= link_to "Edit settings", "/users/edit"

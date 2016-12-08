@@ -17,6 +17,14 @@
       = f.label :url, 'URL'
       = f.text_field :url
 
+    .field
+      = f.label :discip, 'Discipline'
+      = f.text_field :discip
+
+    .field
+      = f.label :kind, 'Kind'
+      = f.text_field :kind
+
     .field#color
       = f.label :color, 'CSS Color', :placeholder => 'hex'
       = f.text_field :color
@@ -28,4 +36,4 @@
       = f.text_area :desc
 
     .actions
-      = f.submit
+      = f.submit 'Update'

@@ -18,6 +18,16 @@
               = fa_icon "thumbs-up"
               = link.votes_for.size
 
+          - if link.discip.present?
+            %h5
+              = fa_icon "pencil"
+              = link.discip
+
+          - if link.kind.present?
+            %h5
+              = fa_icon "cogs"
+              = link.kind
+
           - if user_signed_in?
             .ctrl
               - if link.user_id = current_user.id
