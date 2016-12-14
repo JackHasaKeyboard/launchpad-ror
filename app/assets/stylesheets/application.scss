@@ -97,7 +97,7 @@ h3 {
 						#link_form {
 							.field {
 								display: flex;
-								input, textarea {
+								*:not(label) {
 									margin-left: auto;
 								}
 								textarea {

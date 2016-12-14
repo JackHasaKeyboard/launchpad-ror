@@ -18,12 +18,10 @@
       = f.text_field :url
 
     .field
-      = f.label :discip, 'Discipline'
-      = f.text_field :discip
+      = f.select :discip, ['3D Modeling', 'Animation', 'Audio', 'Business', 'Design', 'Hardware', 'Mobile', 'Photography', 'Programming', 'UI / UX', 'Web']
 
     .field
-      = f.label :kind, 'Kind'
-      = f.text_field :kind
+      = f.select :kind, ['Awards', 'Blog', 'Community', 'Inspiration', 'News', 'Resource', 'School', 'Showcase', 'Tool']
 
     .field#color
       = f.label :color, 'CSS Color', :placeholder => 'hex'
