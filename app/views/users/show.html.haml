@@ -3,73 +3,89 @@
 
   = link_to "Edit settings", "/users/edit"
 
-%h3 Likes
+%hr
+
+%h3
+  Likes
+
+  %select
+    %option Likes
+    %option Name (a-z)
+
+%hr
 
 #links
-  - @likes.each do |like|
-    - if like.present?
+  - @likes.each do |link|
+    - if link.present?
       .link
-        %a{href: "//#{like.url}", target: "_blank", style: "background: #{like.color}"}
-          %h3= like.name
+        %a{href: "//#{link.url}", target: "_blank", style: "background: #{link.color}"}
+          %h3= link.name
 
         .info
-          - if like.desc.present?
-            %p= like.desc
+          - if link.desc.present?
+            %p= link.desc
 
           .stats
             %h5
               = fa_icon "link"
-              = like.url
+              = link.url
 
             %h5
               = fa_icon "thumbs-up"
-              = like.votes_for.size
+              = link.votes_for.size
 
-          - if like.discip.present?
+          - if link.discip.present?
             %h5
               = fa_icon "pencil"
-              = like.discip
+              = link.discip
 
-          - if like.kind.present?
+          - if link.kind.present?
             %h5
               = fa_icon "cogs"
-              = like.kind
+              = link.kind
 
           .ctrl
-            - if like.user_id = current_user.id
-              = link_to "Edit", "links/#{like.slug}/edit"
+            - if link.user_id = current_user.id
+              = link_to "Edit", "links/#{link.slug}/edit"
 
-%h3 Submitted
+%hr
+
+%h3
+  Submitted
+
+  %select
+    %option Likes
+    %option Name (a-z)
 
 #links
-  - @submits.each do |submit|
+  - @submits.each do |link|
     .link
-      %a{href: "//#{submit.url}", target: "_blank", style: "background: #{submit.color}"}
-        %h3= submit.name
+      %a{href: "//#{link.url}", target: "_blank", style: "background: #{link.color}"}
+        %h3= link.name
 
       .info
-        - if submit.desc.present?
-          %p= submit.desc
+        - if link.desc.present?
+          %p= link.desc
 
         .stats
           %h5
-            %a{"data-method" => "put", :href => like_link_path(submit), :rel => "nofollow"}
+            %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
               = fa_icon "thumbs-up"
-              = submit.votes_for.size
+              = link.votes_for.size
 
           %h5
             = fa_icon "link"
-            = submit.url
+            = link.url
 
-          - if submit.discip.present?
+          - if link.discip.present?
             %h5
               = fa_icon "pencil"
-              = submit.discip
+              = link.discip
 
-          - if submit.kind.present?
+          - if link.kind.present?
             %h5
               = fa_icon "cogs"
-              = submit.kind
+              = link.kind
 
         .ctrl
-          = link_to "Edit", "#{submit.slug}/edit"
+          = link_to "Edit", "#{link.slug}/edit"

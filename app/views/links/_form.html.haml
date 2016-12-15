@@ -19,11 +19,11 @@
 
     .field
       = f.label :discip, 'Discipline'
-      = f.select :discip, ['3D Modeling', 'Animation', 'Audio', 'Business', 'Design', 'Hardware', 'Mobile', 'Photography', 'Programming', 'UI / UX', 'Web']
+      = f.select :discip, Discip.all.collect {|d| [d.name]}
 
     .field
       = f.label :kind, 'Kind'
-      = f.select :kind, ['Awards', 'Blog', 'Community', 'Inspiration', 'News', 'Resource', 'School', 'Showcase', 'Tool']
+      = f.select :kind, Kind.all.collect {|k| [k.name]}
 
     .field#color
       = f.label :color, 'CSS Color'

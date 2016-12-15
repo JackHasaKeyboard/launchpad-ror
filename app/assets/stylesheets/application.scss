@@ -37,6 +37,10 @@ li {
 	list-style: none;
 }
 
+hr {
+	background: #fff;
+}
+
 html, body {
 	height: 100%;
 }
@@ -48,7 +52,7 @@ body {
 
 h3 {
 	display: flex;
-	a:last-child {
+	*:last-child {
 		margin-left: auto;
 	}
 }
