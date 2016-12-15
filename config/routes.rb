@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	resources :links do
 		member do
 			put "like", to: "links#like"
+			put "unlike", to: "links#unlike"
 		end
 	end
 

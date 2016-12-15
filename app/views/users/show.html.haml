@@ -8,10 +8,6 @@
 %h3
   Likes
 
-  %select
-    %option Likes
-    %option Name (a-z)
-
 %hr
 
 #links
@@ -31,8 +27,15 @@
               = link.url
 
             %h5
-              = fa_icon "thumbs-up"
-              = link.votes_for.size
+              - if current_user.voted_for? link
+                %a{"data-method" => "put", :href => unlike_link_path(link), :rel => "nofollow"}
+                  = fa_icon "thumbs-up"
+                  = link.votes_for.size
+              
+              - else
+                %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
+                  = fa_icon "thumbs-o-up"
+                  = link.votes_for.size
 
           - if link.discip.present?
             %h5
@@ -48,14 +51,10 @@
             - if link.user_id = current_user.id
               = link_to "Edit", "links/#{link.slug}/edit"
 
-%hr
-
 %h3
   Submitted
 
-  %select
-    %option Likes
-    %option Name (a-z)
+%hr
 
 #links
   - @submits.each do |link|
@@ -69,9 +68,15 @@
 
         .stats
           %h5
-            %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
-              = fa_icon "thumbs-up"
-              = link.votes_for.size
+            - if current_user.voted_for? link
+              %a{"data-method" => "put", :href => unlike_link_path(link), :rel => "nofollow"}
+                = fa_icon "thumbs-up"
+                = link.votes_for.size
+            
+            - else
+              %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
+                = fa_icon "thumbs-o-up"
+                = link.votes_for.size
 
           %h5
             = fa_icon "link"

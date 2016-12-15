@@ -14,9 +14,15 @@
             = link.url
 
           %h5
-            %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
-              = fa_icon "thumbs-up"
-              = link.votes_for.size
+            - if current_user.voted_for? link
+              %a{"data-method" => "put", :href => unlike_link_path(link), :rel => "nofollow"}
+                = fa_icon "thumbs-up"
+                = link.votes_for.size
+            
+            - else
+              %a{"data-method" => "put", :href => like_link_path(link), :rel => "nofollow"}
+                = fa_icon "thumbs-o-up"
+                = link.votes_for.size
 
           - if link.discip.present?
             %h5

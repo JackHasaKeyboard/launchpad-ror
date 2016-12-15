@@ -8,6 +8,12 @@ class LinksController < ApplicationController
 		redirect_to :back
 	end
 
+	def unlike
+		@link = Link.friendly.find(params[:id])
+		@link.unliked_by current_user
+		redirect_to :back
+	end
+
 	# GET /links
 	# GET /links.json
 	def index
