@@ -11,27 +11,29 @@
   #link_form
     .field
       = f.label :name
-      = f.text_field :name
+      = f.text_field :name, :placeholder => 'Name of service, website if not applicable'
 
     .field
       = f.label :url, 'URL'
-      = f.text_field :url
+      = f.text_field :url, :placeholder => 'https://www.website.com/'
 
     .field
+      = f.label :discip, 'Discipline'
       = f.select :discip, ['3D Modeling', 'Animation', 'Audio', 'Business', 'Design', 'Hardware', 'Mobile', 'Photography', 'Programming', 'UI / UX', 'Web']
 
     .field
+      = f.label :kind, 'Kind'
       = f.select :kind, ['Awards', 'Blog', 'Community', 'Inspiration', 'News', 'Resource', 'School', 'Showcase', 'Tool']
 
     .field#color
-      = f.label :color, 'CSS Color', :placeholder => 'hex'
-      = f.text_field :color
-
-      #color_box
+      = f.label :color, 'CSS Color'
+      %div
+        #color_box
+        = f.text_field :color, :placeholder => '#000000 / rgb(000, 000, 000), word / black'
 
     .field
-      = f.label :desc, 'Description', :placeholder => 'General justification of the website and how it works'
-      = f.text_area :desc
+      = f.label :desc, 'Description'
+      = f.text_area :desc, :placeholder => 'General justification of the website and how it works'
 
     .actions
-      = f.submit 'Update'
+      = f.submit 'Submit'

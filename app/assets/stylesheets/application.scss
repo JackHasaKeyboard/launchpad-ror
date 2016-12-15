@@ -97,22 +97,26 @@ h3 {
 						#link_form {
 							.field {
 								display: flex;
-								*:not(label) {
-									margin-left: auto;
-								}
-								textarea {
-									width: 260px;
-									font-family: inherit;
-									overflow: visible;
-								}
-							}
-							#color {
-								#color_box {
-									margin-left: auto;
-									position: absolute;
-									display: inline-block;
-									padding: 10px;
-									margin-bottom: -6px;
-								}
-							}
-						}
+												 *:not(label) {
+													 margin-left: auto;
+												 }
+												 textarea {
+													 width: 260px;
+													 font-family: inherit;
+													 overflow: visible;
+												 }
+												 select, option {
+													 color: #000;
+												 }
+											 }
+											 #color {
+												 div {
+													 #color_box {
+													 	 padding: 10px;
+														 background: red;
+														 display:  inline-block;
+														 margin-bottom: -5px;
+													 }
+												 }
+											 }
+										 }
