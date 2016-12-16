@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 	devise_for :users
 
-	resources :users, only: [:show]
+	resources :users, :only => [:show, :edit]
 
-	get 'account' => 'users#show'
+	match 'account' => 'users#show', via: [:get, :post]
 
 	resources :links, :path => '/'
 	resources :links do
